@@ -1,0 +1,46 @@
+<div class="inner-body">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary text-center">
+        <div class="panel-heading">
+          <h4 class="panel-title">Currency Converter</h4>
+        </div>
+        <div class="error">
+          Please enter numeric value
+        </div>
+        <div class="panel-body">
+          <form class="form-vertical">
+
+            <div class="form-group center">
+              <label for="currencyValue">Enter Value:</label>
+              <input type="number" class="amount form-control" placeholder="Enter value" min="1" id="currencyValue" name="currencyValue" [(ngModel)]="currencyValue">
+            </div>
+
+
+            <div class="form-group inline-block">
+              <label for="fromCurrency">From currency:</label>
+              <select class="currency-list form-control" id="fromCurrency" name="fromCurrency" [(ngModel)]="selectedFromCurrency">
+                <option value="">--Select--</option>
+                <option *ngFor="let currecny of allCurrency" value={{currecny}}>{{currecny}}</option>
+              </select>
+            </div>
+
+            <div class="form-group inline-block">
+              <label for="toCurrency">To currency:</label>
+              <select class="currency-list form-control" id="toCurrency" name="toCurrency" [(ngModel)]="selectedToCurrency">
+                <option value="">--Select--</option>
+                <option *ngFor="let currecny of allCurrency" value={{currecny}}>{{currecny}}</option>
+              </select>
+            </div>
+
+            <div class="form-group inline-block">
+              <button type="submit" class="currency-list form-control btn" (click)="convertCurrency()">GO</button>
+            </div>
+
+          </form>
+          <p *ngIf="convertedCurrencyValue" class="results">{{currencyValue}} {{selectedFromCurrency}} = {{convertedCurrencyValue}} {{selectedToCurrency}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

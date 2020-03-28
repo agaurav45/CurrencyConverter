@@ -1,0 +1,39 @@
+.row {
+  margin-top: 10%;
+  margin-left: 5%
+}
+
+.panel {
+  background: #333333;
+  border: solid white;
+  padding-bottom: 70px;
+}
+
+.results {
+  font-size: 1em;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.form-group {
+	padding: 20px 5px;
+}
+
+.dropdown {
+  margin-bottom: 50px;
+}
+
+.inline-block {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.center {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  height: 36px;
+  line-height: 36px;
+}
